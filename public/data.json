@@ -1,0 +1,102 @@
+[
+  {
+    "taskId": 1,
+    "name": "Design Landing Page",
+    "priority": "High",
+    "status": "to-do",
+    "deadline": "2023-12-20",
+    "description": "Create a visually appealing landing page for the website. Utilize modern design principles to enhance user engagement.",
+    "category": "Design",
+    "email": "atikurrahaman0304@gmail.com"
+  },
+  {
+    "taskId": 2,
+    "name": "Implement User Authentication",
+    "priority": "Moderate",
+    "status": "to-do",
+    "deadline": "2023-12-25",
+    "description": "Integrate user authentication functionality using JWT. Enhance security and user access control for the application.",
+    "category": "Development",
+    "email": "hosansaddam63@gmail.com"
+  },
+  {
+    "taskId": 3,
+    "name": "Write Technical Blog Post",
+    "priority": "Low",
+    "status": "to-do",
+    "deadline": "2023-12-30",
+    "description": "Draft a technical blog post on a relevant industry topic. Share insights and knowledge to engage the target audience effectively.",
+    "category": "Content Creation",
+    "email": "atikurrahaman0304@gmail.com"
+  },
+  {
+    "taskId": 4,
+    "name": "Optimize Database Queries",
+    "priority": "High",
+    "status": "to-do",
+    "deadline": "2023-12-18",
+    "description": "Improve the efficiency of database queries for better performance. Optimize data retrieval and processing workflows.",
+    "category": "Database Optimization",
+    "email": "atikurrahaman0304@gmail.com"
+  },
+  {
+    "taskId": 5,
+    "name": "Conduct UI/UX Workshop",
+    "priority": "Moderate",
+    "status": "to-do",
+    "deadline": "2023-12-28",
+    "description": "Organize a workshop to discuss UI/UX best practices. Foster collaboration and knowledge sharing among team members.",
+    "category": "Training",
+    "email": "atikurrahaman0305@gmail.com"
+  },
+  {
+    "taskId": 6,
+    "name": "Review Code Pull Requests",
+    "priority": "Low",
+    "status": "to-do",
+    "deadline": "2023-12-22",
+    "description": "Review and provide feedback on code pull requests from team members. Ensure code quality and adherence to coding standards.",
+    "category": "Code Review",
+    "email": "atikurrahaman0304@gmail.com"
+  },
+  {
+    "taskId": 7,
+    "name": "Create Social Media Graphics",
+    "priority": "High",
+    "status": "to-do",
+    "deadline": "2023-12-23",
+    "description": "Design graphics for social media posts to promote upcoming events. Create visually appealing content to boost online presence.",
+    "category": "Social Media",
+    "email": "atikurrahaman0305@gmail.com"
+  },
+  {
+    "taskId": 8,
+    "name": "Test Cross-Browser Compatibility",
+    "priority": "Moderate",
+    "status": "to-do",
+    "deadline": "2023-12-27",
+    "description": "Perform testing to ensure the website is compatible with various browsers. Identify and address compatibility issues for a seamless user experience.",
+    "category": "Testing",
+    "email": "atikurrahaman0305@gmail.com"
+  },
+  {
+    "taskId": 9,
+    "name": "Prepare Monthly Report",
+    "priority": "Low",
+    "status": "to-do",
+    "deadline": "2023-12-31",
+    "description": "Compile and analyze data for the monthly project report. Summarize key insights and achievements for stakeholders.",
+    "category": "Reporting",
+    "email": "atikurrahaman0304@gmail.com"
+  },
+  {
+    "taskId": 10,
+    "name": "Set Up Continuous Integration",
+    "priority": "High",
+    "status": "to-do",
+    "deadline": "2023-12-17",
+    "description": "Configure continuous integration for automated testing and deployment. Streamline the development process for increased efficiency.",
+    "category": "DevOps",
+    "email": "atikurrahaman0305@gmail.com"
+  }
+]

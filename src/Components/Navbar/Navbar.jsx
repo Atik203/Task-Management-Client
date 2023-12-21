@@ -41,22 +41,12 @@ const Navbar = () => {
 
       <li>
         <NavLink
-          to="/all-contest/Gaming"
+          to="/dashboard"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "text-[#FF444A] underline" : ""
           }
         >
-          All Contests
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/leaderboard"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-[#FF444A] underline" : ""
-          }
-        >
-          LeaderBoard
+          Dashboard
         </NavLink>
       </li>
       <li>
