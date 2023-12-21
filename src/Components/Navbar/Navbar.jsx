@@ -78,16 +78,6 @@ const Navbar = () => {
         <p className="text-base font-semibold">{displayName}</p>
       </li>
       <li>
-        <NavLink
-          to="/dashboard"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-[#FF444A] underline" : ""
-          }
-        >
-          Dashboard
-        </NavLink>
-      </li>
-      <li>
         <button onClick={handleLogout} className="text-red-500 font-bold">
           Logout
         </button>

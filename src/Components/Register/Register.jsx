@@ -4,10 +4,9 @@ import "react-toastify/dist/ReactToastify.css";
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
-
 import { useForm } from "react-hook-form";
-import useAxiosSecure from "./../../Hooks/useAxiosSecure";
-import { AuthContext } from "./../Providers/AuthProvider";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -97,9 +96,9 @@ const Register = () => {
           });
         });
 
-        // setTimeout(() => {
-        //   window.location.reload();
-        // }, 1000);
+        setTimeout(() => {
+          window.location.reload();
+        }, 1000);
       })
       .catch((error) => setRegError(error.message));
   };

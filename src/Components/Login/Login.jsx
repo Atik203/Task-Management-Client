@@ -6,7 +6,8 @@ import { useForm } from "react-hook-form";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { Helmet } from "react-helmet";
 import useAxiosSecure from "./../../Hooks/useAxiosSecure";
-import { AuthContext } from "./../Providers/AuthProvider";
+import { AuthContext } from "../../Providers/AuthProvider";
+
 import auth from "./../../Firebase/firebase.config";
 
 const Login = () => {
