@@ -67,7 +67,7 @@ const SingleTask = ({ item, tasks, refetch }) => {
         <p>Priority: {priority}</p>
       </div>
       <div className="flex items-center w-24 text-lg mx-auto justify-between text-white mt-3">
-        <Link to="/dashboard/update-task">
+        <Link to={`/dashboard/update-task/${_id}`}>
           {" "}
           <div className="mx-auto bg-red-500 p-2 rounded-sm cursor-pointer  hover:text-black hover:bg-gray-400">
             <FaEdit></FaEdit>

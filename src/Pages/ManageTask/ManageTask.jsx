@@ -26,8 +26,7 @@ const ManageTask = () => {
         <Helmet>
           <title>Manage Task</title>
         </Helmet>
-
-        <div className="flex flex-col justify-around lg:flex-row gap-5 lg:gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-20 mx-auto">
           {statuses?.map((status, index) => (
             <TaskCard
               key={index}

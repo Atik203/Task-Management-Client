@@ -60,7 +60,7 @@ const router = createBrowserRouter([
         element: <CreateTask></CreateTask>,
       },
       {
-        path: "update-task",
+        path: "update-task/:id",
         element: <UpdateTask></UpdateTask>,
       },
     ],

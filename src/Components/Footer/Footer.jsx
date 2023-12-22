@@ -3,11 +3,11 @@ const Footer = () => {
     <div className="bg-gray-700">
       <footer className="footer text-white p-12 md:p-12 md:flex md:gap-4 lg:grid ">
         <nav>
-          <header className="footer-title">ContestHub Services</header>
-          <a className="link link-hover">Exciting Contests</a>
-          <a className="link link-hover">Creative Challenges</a>
+          <header className="footer-title">TaskManage Services</header>
+          <a className="link link-hover">Exciting Task Management</a>
+          <a className="link link-hover">Creative design</a>
           <a className="link link-hover">Event Planning</a>
-          <a className="link link-hover">Custom Prizes</a>
+          <a className="link link-hover">Custom template</a>
         </nav>
 
         <nav>
@@ -46,7 +46,7 @@ const Footer = () => {
         </form>
       </footer>
       <p className="text-sm mb-1 text-center text-gray-300">
-        &copy;2023 All Rights Reserved | ContestHub
+        &copy;2023 All Rights Reserved | TaskManage
       </p>
     </div>
   );
