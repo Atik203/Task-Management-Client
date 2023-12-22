@@ -29,7 +29,6 @@ const CreateTask = () => {
     };
 
     axiosSecure.post("/tasks", taskData).then((res) => {
-      console.log(taskData);
       toast.success("Added Successfully", {
         position: "top-right",
         autoClose: 5000,

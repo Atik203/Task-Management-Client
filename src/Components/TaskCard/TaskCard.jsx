@@ -1,36 +1,90 @@
-import React from "react";
-import Countdown from "react-countdown";
-import { FaEdit } from "react-icons/fa";
+import TaskHeader from "../TaskHeader/TaskHeader";
+import SingleTask from "../SingleTask/SingleTask";
+import { useDrop } from "react-dnd";
+import useAxiosSecure from "../../Hooks/useAxiosSecure";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useEffect, useState } from "react";
 
-const TaskCard = ({ item }) => {
-  const { _id, name, category, description, deadline, status, priority } = item;
-  const deadlineDate = new Date(deadline);
-  const now = new Date();
-  const isDeadlineOver = deadlineDate < now;
+const TaskCard = ({
+  status,
+  tasks,
+  isPending,
+  refetch,
+  TODO,
+  Ongoing,
+  Completed,
+  setTasks,
+}) => {
+  const axiosSecure = useAxiosSecure();
+
+  if (isPending) {
+    return (
+      <span className="loading text-center mt-20 loading-spinner loading-lg"></span>
+    );
+  }
+  let text = "to-do";
+  let bg = "bg-red-500";
+  let defaultTask = TODO;
+  if (status === "ongoing") {
+    defaultTask = Ongoing;
+    text = "On-Going";
+    bg = "bg-blue-500";
+  }
+  if (status === "completed") {
+    defaultTask = Completed;
+    text = "Completed";
+    bg = "bg-green-500";
+  }
+  const [{ isOver }, drop] = useDrop(() => ({
+    accept: "item",
+    drop: (item) => addItemToSection(item.id),
+    collect: (monitor) => ({
+      isOver: !!monitor.isOver(),
+    }),
+  }));
+  const addItemToSection = async (id) => {
+    const newStatus = status;
+    try {
+      const res = await axiosSecure.patch(`/update-status/${id}`, {
+        newStatus,
+      });
+
+      toast.success("Added Successfully", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      refetch();
+    } catch (error) {
+      console.error("Error updating status:", error);
+    }
+  };
+
   return (
-    <div className="mx-auto bg-white  rounded-xl overflow-hidden shadow-lg p-6">
-      <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold mb-2">
-        {category}
+    <div
+      ref={drop}
+      className={`w-72 rounded-md ${isOver ? "bg-slate-200" : ""}`}
+    >
+      <div className="">
+        {" "}
+        <TaskHeader text={text} bg={bg} count={defaultTask.length}></TaskHeader>
       </div>
-      <h2 className="text-lg font-semibold mb-2">{name}</h2>
-      <p className="text-gray-500 text-justify mb-4">{description}</p>
-      <div className="flex justify-between text-gray-700">
-        {!isDeadlineOver && (
-          <p className="">
-            Deadline: <Countdown date={deadlineDate} daysInHours />
-          </p>
-        )}
-        {isDeadlineOver && <p>Deadline is Over</p>}
-        <p>Priority: {priority}</p>
-      </div>
-      <div className="flex items-center p-2 rounded-sm w-16 text-white bg-red-500 cursor-pointer hover:text-black hover:bg-gray-400 mx-auto gap-2 mt-3">
-        <div className="mx-auto">
-          <h1 className="text-base">Edit</h1>
-        </div>
-        <div className="mx-auto">
-          <FaEdit></FaEdit>
-        </div>
-      </div>
+      {defaultTask.length > 0 &&
+        defaultTask?.map((item) => (
+          <SingleTask
+            key={item._id}
+            item={item}
+            tasks={tasks}
+            refetch={refetch}
+          ></SingleTask>
+        ))}
+      <ToastContainer />
     </div>
   );
 };

@@ -111,11 +111,11 @@ const Navbar = () => {
             <img
               width="48"
               height="48"
-              src="https://i.ibb.co/Y7SKwL4/trophy-8187746.png"
+              src="https://i.ibb.co/fMJYv2T/project-management.png"
               alt="filled-like--v1"
               className="inline"
             />{" "}
-            ContestHub
+            TaskManage
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
