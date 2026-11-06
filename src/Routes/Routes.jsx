@@ -9,6 +9,7 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
 import ManageTask from "../Pages/ManageTask/ManageTask";
 import CreateTask from "../Pages/CreateTask/CreateTask";
 import UpdateTask from "../Pages/UpdateTask/UpdateTask";
+import AboutUs from "../Pages/AboutUs/AboutUs";
 
 const router = createBrowserRouter([
   {
@@ -28,14 +29,10 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register></Register>,
       },
-      // {
-      //   path: "/dashboard",
-      //   element: (
-      //     <PrivateRoute>
-      //       <Dashboard></Dashboard>
-      //     </PrivateRoute>
-      //   ),
-      // },
+      {
+        path: "/aboutUs",
+        element: <AboutUs></AboutUs>,
+      },
     ],
   },
   {

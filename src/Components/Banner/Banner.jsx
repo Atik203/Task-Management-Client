@@ -14,7 +14,7 @@ const Banner = () => {
         />
       </div>
       <div
-        className="w-2/3 mx-auto absolute top-60 md:top-60 lg:top-72 -mt-4 md:-mt-20 ml-12 md:ml-24 lg:-mt-8 lg:ml-44"
+        className="w-2/3 mx-auto absolute top-60 md:top-60 lg:top-72 -mt-16 md:-mt-20 ml-12 md:ml-24 lg:-mt-8 lg:ml-44"
         data-aos="fade-up"
         data-aos-duration="2000"
       >

@@ -2,7 +2,7 @@ import React from "react";
 
 const TargetAudienceSection = () => {
   return (
-    <div className="container mx-auto my-12">
+    <div className="container mx-auto my-16">
       {/* Other content on your website */}
 
       {/* New section for target audience and benefits */}
@@ -11,7 +11,7 @@ const TargetAudienceSection = () => {
           Who Benefits from Our Website?
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 w-10/12 mx-auto gap-8">
           {/* Developer Persona */}
           <div className="persona bg-white p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-semibold mb-4">Developers</h3>
@@ -39,7 +39,16 @@ const TargetAudienceSection = () => {
             </p>
           </div>
 
-          {/* Add more personas as needed */}
+          {/* Personal Task Management Persona */}
+          <div className="persona bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">
+              Personal Task Management
+            </h3>
+            <p className="text-gray-600">
+              Simplify your life with easy task management, stylish design, and
+              user-friendly features.
+            </p>
+          </div>
         </div>
 
         <div className="mt-16">
@@ -47,7 +56,7 @@ const TargetAudienceSection = () => {
             Benefits for All Users
           </h2>
 
-          <ul className="list-disc list-inside text-lg text-gray-700">
+          <ul className="list-disc text-center list-inside text-lg text-gray-700">
             <li className="mb-3">
               Stay updated with the latest industry trends.
             </li>
@@ -55,6 +64,9 @@ const TargetAudienceSection = () => {
               Enhance your skills with our educational resources.
             </li>
             <li>Connect and collaborate with like-minded professionals.</li>
+            <li className="mt-3">
+              Effortless task management with stylish and user-friendly design.
+            </li>
           </ul>
         </div>
       </section>
